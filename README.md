@@ -86,16 +86,3 @@ conda env create -f environment.yml
 conda activate seasonal-flu-notebook
 jupyter notebook
 ```
-
-<!-- Below, we describe the code and input data in more detail.
-The standard `seasonal-flu` Nextstrain workflow includes the basic steps of reading in HA gene nucleotide sequences and metadata, aligning the sequences (both at the nucleotide and amino-acid level), and generating a phylogenetic tree annotated with strain-specific metadata.
-
-We added `snakemake` rules that perform the following steps:
-* one rule uses DMS data from a single serum sample to estimate an escape score for each of the input strains. Our strategy for estimating escape scores is described in more detail in the paper, and takes as input the amino-acid level multiple-sequence alignment from above. This code outputs CSV and JSON files with estimated escape scores.
-* the JSON files are fed into the pipeline when generating the auspice output file to allow scores to be visualized on the tree.
-* do we add any other rules? -->
-
-
-<!-- We forked this repository from https://github.com/nextstrain/seasonal-flu, which is a Nextstrain build for seasonal-influenza viruses, where all steps are combined into a single `snakemake` pipeline.
-We added a step to this pipeline that uses DMS data to estimate escape scores for the input viruses.
-The entire pipeline can be run with the following command, assuming all input files are present (the input sequences and metadata cannot be publicly shared, but can be obtained from GISAID; see above): -->
