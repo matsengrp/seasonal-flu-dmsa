@@ -79,7 +79,13 @@ While we're unable to share the raw intermediate files in this repository, we ha
 ## Analysis of estimated escape scores
 * `analysis_code.ipynb`: a Jupyter notebook that analyzes the escape scores as described above. This notebook creates Figure 6B from the paper and performs the statistical analysis to test whether the relationship between escape score and sampling date is different for different cohorts.
 
-
+To run the notebook:
+```
+cd profiles/dmsa-phenotype/notebooks
+conda env create -f environment.yml
+conda activate seasonal-flu-notebook
+jupyter notebook
+```
 
 <!-- Below, we describe the code and input data in more detail.
 The standard `seasonal-flu` Nextstrain workflow includes the basic steps of reading in HA gene nucleotide sequences and metadata, aligning the sequences (both at the nucleotide and amino-acid level), and generating a phylogenetic tree annotated with strain-specific metadata.
