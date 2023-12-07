@@ -1,7 +1,7 @@
 
 
-sequences: "profiles/dmsa-phenotype/sequences/12y_sequences.fasta.xz"
-metadata: "profiles/dmsa-phenotype/sequences/12y_metadata.tsv.xz"
+sequences: "profiles/dmsa-phenotype/data/12y_sequences.fasta.xz"
+metadata: "profiles/dmsa-phenotype/data/12y_metadata.tsv.xz"
 
 custom_rules:
   - profiles/dmsa-phenotype/dmsa-pred/dmsa_rules.smk
@@ -55,12 +55,12 @@ dmsa_phenotype_collections:
     # name of the wildtype sequence strain - must be included in sequences
     dms_wt_seq_id: "A/HK/45/2019"
     # directory containing escape csv's
-    mut_effects_dir: "profiles/dmsa-phenotype/antibody_escape/filtered_data/"
+    mut_effects_dir: "profiles/dmsa-phenotype/data/filtered_data/"
     # name of the column containing the effect score
     mut_effect_col: "escape_median"
     # name of the column containing the mutation
     mutation_col: "mutation"
-    allow_unmeasured_aa_subs_at_these_sites: "profiles/dmsa-phenotype/allow_unmeasured_aa_subs_at_these_sites.txt"
+    allow_unmeasured_aa_subs_at_these_sites: "profiles/dmsa-phenotype/data/allow_unmeasured_aa_subs_at_these_sites.txt"
 
 builds:
 
